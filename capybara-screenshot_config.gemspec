@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'capybara/screenshot_options/version'
+require 'capybara/screenshot_config/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "capybara-screenshot_options"
-  spec.version       = Capybara::ScreenshotOptions::VERSION
+  spec.name          = "capybara-screenshot_config"
+  spec.version       = Capybara::ScreenshotConfig::VERSION
   spec.authors       = ["toshi"]
   spec.email         = ["me@toshimaru.net"]
 

@@ -1,9 +1,9 @@
 require 'capybara'
-require "capybara/screenshot_options/version"
-require "capybara/screenshot_options/configuration"
+require "capybara/screenshot_config/version"
+require "capybara/screenshot_config/configuration"
 
 module Capybara
-  module ScreenshotOptions
+  module ScreenshotConfig
     class << self
       def configure
         yield(configuration)
@@ -20,7 +20,7 @@ module Capybara
     alias_method :old_save_screenshot, :save_screenshot
 
     def save_screenshot(path, options={})
-      old_save_screenshot("#{ScreenshotOptions.configuration.save_dir}/#{path}", options)
+      old_save_screenshot("#{ScreenshotConfig.configuration.save_dir}/#{path}", options)
     end
   end
 end

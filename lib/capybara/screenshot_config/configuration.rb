@@ -1,5 +1,5 @@
 module Capybara
-  module ScreenshotOptions
+  module ScreenshotConfig
     class Configuration
       attr_accessor :save_dir, :full
 
