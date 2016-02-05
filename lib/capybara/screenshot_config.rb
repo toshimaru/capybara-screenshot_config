@@ -20,7 +20,7 @@ module Capybara
     alias_method :old_save_screenshot, :save_screenshot
 
     def save_screenshot(path, options={})
-      # TODO: merge options
+      options = ScreenshotConfig.configuration.options.merge(options)
 
       old_save_screenshot("#{ScreenshotConfig.configuration.save_dir}/#{path}", options)
     end
