@@ -1,8 +1,6 @@
 # Capybara::ScreenshotConfig
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/capybara/screenshot_config`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Easier Capybara screenshot configuration gem.
 
 ## Installation
 
@@ -22,7 +20,29 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### poltergeist
+
+```ruby
+require "capybara/poltergeist"
+Capybara.javascript_driver = :poltergeist
+```
+
+### ScreenshotConfig configuration
+
+```ruby
+Capybara::ScreenshotConfig.configure do |config|
+  config.save_dir = "screenshot" # screenshot save directory
+  config.full     = true         # full screenshot
+end
+```
+
+### save_screenshot
+
+```ruby
+describe 'screenshot', js: true do
+  it { page.save_screenshot "screenshot.png" }
+end
+```
 
 ## Development
 
@@ -33,4 +53,3 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/capybara-screenshot_config.
-

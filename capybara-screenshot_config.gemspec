@@ -1,4 +1,3 @@
-# coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'capybara/screenshot_config/version'
@@ -9,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["toshimaru"]
   spec.email         = ["me@toshimaru.net"]
 
-  spec.summary       = %q{Capybara screenshot cofiguration}
-  spec.description   = %q{Capybara screenshot cofiguration. It works for Capybara and poltergeist.}
+  spec.summary       = %q{Easier Capybara screenshot configuration}
+  spec.description   = %q{Easier Capybara screenshot configuration gem.}
   spec.homepage      = "https://github.com/toshimaru/capybara-screenshot_config"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
