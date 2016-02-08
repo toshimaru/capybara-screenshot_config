@@ -1,5 +1,8 @@
 # Capybara::ScreenshotConfig
 
+[![Gem Version](https://badge.fury.io/rb/capybara-screenshot_config.svg)](https://badge.fury.io/rb/capybara-screenshot_config)
+[![Code Climate](https://codeclimate.com/github/toshimaru/capybara-screenshot_config/badges/gpa.svg)](https://codeclimate.com/github/toshimaru/capybara-screenshot_config)
+
 Easier Capybara screenshot configuration gem.
 
 ## Installation
@@ -18,21 +21,27 @@ Or install it yourself as:
 
     $ gem install capybara-screenshot_config
 
+## Requirement
+- capybara 2.x or more
+- poltergeist for Capybara javascript_driver
+
 ## Usage
 
-### poltergeist
+### Setup poltergeist
 
 ```ruby
 require "capybara/poltergeist"
 Capybara.javascript_driver = :poltergeist
 ```
 
+For more information, see [here](https://github.com/teampoltergeist/poltergeist).
+
 ### ScreenshotConfig configuration
 
 ```ruby
 Capybara::ScreenshotConfig.configure do |config|
-  config.save_dir = "screenshot" # screenshot save directory
-  config.full     = true         # full screenshot
+  config.save_dir = "screenshot" # [String]  screenshot save directory
+  config.full     = true         # [Boolean] full screenshot
 end
 ```
 
