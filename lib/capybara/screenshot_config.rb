@@ -15,14 +15,15 @@ module Capybara
     end
   end
 
-  # monkey patching Capybara::Session#save_screenshot
-  class Session
-    alias_method :old_save_screenshot, :save_screenshot
-
+  module SaveScreenshotPatch
     def save_screenshot(path, options={})
       options = ScreenshotConfig.configuration.options.merge(options)
 
-      old_save_screenshot("#{ScreenshotConfig.configuration.save_dir}/#{path}", options)
+      super("#{ScreenshotConfig.configuration.save_dir}/#{path}", options)
     end
+  end
+
+  class Session
+    prepend SaveScreenshotPatch
   end
 end
