@@ -9,8 +9,9 @@ Gem::Specification.new do |spec|
   spec.email         = ["me@toshimaru.net"]
 
   spec.summary       = %q{Easier Capybara screenshot configuration}
-  spec.description   = %q{Easier Capybara screenshot configuration gem.}
+  spec.description   = %q{This gem is no longer maintained. Easier Capybara screenshot configuration gem.}
   spec.homepage      = "https://github.com/toshimaru/capybara-screenshot_config"
+  spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = "exe"
