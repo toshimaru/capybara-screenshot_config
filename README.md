@@ -5,6 +5,20 @@
 
 Easier Capybara screenshot configuration gem.
 
+## RETIREMENT
+
+This gem is originally created to make Capybara screenshot configuration easier and unify screenshot save paths. Howerver, the directory can be specified by setting `Capybara.save_path`.
+
+```rb
+require "capybara/poltergeist"
+Capybara.javascript_driver = :poltergeist
+Capybara.save_path = "screenshot"
+```
+
+This gem is no longer maintained. Please use `Capybara.save_path`.
+
+---
+
 ## Installation
 
 Add this line to your application's Gemfile:
