@@ -15,11 +15,15 @@ gem 'capybara-screenshot_config'
 
 And then execute:
 
-    $ bundle
+```
+$ bundle
+```
 
 Or install it yourself as:
 
-    $ gem install capybara-screenshot_config
+```
+$ gem install capybara-screenshot_config
+```
 
 ## Requirement
 - capybara 2.x or more
